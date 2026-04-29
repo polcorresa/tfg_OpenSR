@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: opensr-local-runner
+Version: 0.1.0
+Summary: Local GeoTIFF runner for ESA OpenSR SEN2SR and LDSR-S2 workflows
+Requires-Python: >=3.12

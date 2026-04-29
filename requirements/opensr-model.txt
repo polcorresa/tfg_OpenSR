@@ -1,0 +1,3 @@
+omegaconf>=2.3.0
+opensr-model>=1.1.0
+requests>=2.32.0

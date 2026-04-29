@@ -1,0 +1,26 @@
+workflow: sen2sr_full_x4
+models_dir: models
+
+input:
+  path: rawData/example_full_stack.tif
+  band_order:
+    - B02
+    - B03
+    - B04
+    - B05
+    - B06
+    - B07
+    - B08
+    - B8A
+    - B11
+    - B12
+  reflectance_scale: 10000.0
+
+output:
+  path: outputs/example_full_sr_2p5m.tif
+
+runtime:
+  device: auto
+  tile_size: 128
+  overlap: 32
+  sampling_steps: 100

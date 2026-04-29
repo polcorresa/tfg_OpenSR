@@ -1,0 +1,20 @@
+workflow: sen2sr_rgbn_x4
+models_dir: models
+
+input:
+  path: rawData/example_rgbn.tif
+  band_order:
+    - B04
+    - B03
+    - B02
+    - B08
+  reflectance_scale: 10000.0
+
+output:
+  path: outputs/example_rgbn_sr_2p5m.tif
+
+runtime:
+  device: auto
+  tile_size: 128
+  overlap: 32
+  sampling_steps: 100

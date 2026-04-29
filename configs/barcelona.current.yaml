@@ -1,0 +1,28 @@
+workflow: sen2sr_full_x4
+models_dir: models
+
+input:
+  path: rawData/barcelona_terminal_s2.tif
+  band_order:
+    - B01
+    - B02
+    - B03
+    - B04
+    - B05
+    - B06
+    - B07
+    - B08
+    - B8A
+    - B09
+    - B11
+    - B12
+  reflectance_scale: 10000.0
+
+output:
+  path: outputs/barcelona_terminal_s2_sr.tif
+
+runtime:
+  device: auto
+  tile_size: 128
+  overlap: 32
+  sampling_steps: 100

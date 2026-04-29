@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "OpenSR: Setup Env",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/setup_env.ps1"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "OpenSR: Inspect Current Input",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/inspect_input.ps1",
+        "-Config",
+        "configs/barcelona.current.yaml"
+      ]
+    },
+    {
+      "label": "OpenSR: Run Current Config",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/run_inference.ps1",
+        "-Config",
+        "configs/barcelona.current.yaml"
+      ],
+      "group": "test"
+    }
+  ]
+}
